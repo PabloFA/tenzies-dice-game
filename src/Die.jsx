@@ -3,9 +3,14 @@ import './App.css'
 
 export default function Die({ value, holdDice, isHeld }) {
   const styles = {
-    backgroundColor: isHeld ? '#59E391' : 'white',
+    backgroundColor: isHeld ? '#240046' : 'white',
   }
-  const Dot = () => <span className='dot' />
+
+  const dotHeld = {
+    backgroundColor: isHeld ? '#fff' : '#240046',
+  }
+
+  const Dot = () => <span className='dot' style={dotHeld} />
 
   const Face = ({ children }) => (
     <div className='die-face' style={styles} onClick={holdDice}>
@@ -18,10 +23,5 @@ export default function Die({ value, holdDice, isHeld }) {
         .fill(0)
         .map((_, i) => <Dot key={i} />)
     : null
-  return (
-    <Face>{dots}</Face>
-    /*<div className='die-face' style={styles} onClick={holdDice}>
-      <h2 className='die-num'>{value}</h2>
-    </div>*/
-  )
+  return <Face>{dots}</Face>
 }

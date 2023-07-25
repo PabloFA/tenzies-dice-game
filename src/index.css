@@ -4,18 +4,23 @@
 
 body {
   margin: 0;
-  background-color: #0b2434;
+  background-color: #7a5d96;
   padding: 20px;
   font-family: 'Karla', sans-serif;
   display: flex;
+  color: #240046;
+}
+
+h1 {
+  font-size: 1.5rem;
 }
 
 main {
-  background-color: #ebeaea;
-  height: 400px;
+  background-color: #f7eaff;
+  height: 700px;
   max-width: 500px;
   border-radius: 5px;
-  padding: 20px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -23,7 +28,7 @@ main {
 }
 
 .title {
-  font-size: 40px;
+  font-size: 1.8rem;
   margin: 0;
 }
 
@@ -32,6 +37,7 @@ main {
   font-weight: 400;
   margin-top: 0;
   text-align: center;
+  width: 340px;
 }
 
 .dice-container {
@@ -39,6 +45,22 @@ main {
   grid-template: auto auto / repeat(5, 1fr);
   gap: 20px;
   margin-bottom: 20px;
+}
+
+.timer-clock {
+  padding: 10px;
+  border: 2px solid #240046;
+  border-radius: 10px;
+  display: flex;
+  place-items: center;
+  margin: auto;
+}
+
+.die-num {
+  font-family: Inter;
+  font-size: 1.2rem;
+  color: #240046;
+  margin: auto;
 }
 
 .die-face {
@@ -60,12 +82,11 @@ main {
   display: block;
   align-self: center;
   justify-self: center;
-  width: 11px;
-  height: 11px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   margin: 1px;
-  background-color: #333;
-  box-shadow: inset 0 3px #111, inset 0 -3px #555;
+  background-color: #240046;
 }
 
 /* DICE ONE */
@@ -90,14 +111,15 @@ main {
 }
 
 .roll-dice {
-  height: 60px;
-  width: 150px;
+  height: 50px;
+  width: 130px;
   border: none;
   border-radius: 6px;
-  background-color: #5035ff;
+  background-color: #ff5e00;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.125rem;
   font-family: 'Karla', sans-serif;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -105,6 +127,73 @@ main {
   outline: none;
 }
 
+.roll-dice:hover {
+  box-shadow: 0px 4px 4px rgba(196, 75, 4, 0.192);
+}
+
 .roll-dice:active {
   box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  justify-content: space-between;
+  width: 360px;
+}
+
+.table {
+  width: 100%;
+  background-color: whitesmoke;
+  border-radius: 6px;
+}
+
+.tab-header {
+  font-weight: bold;
+  text-align: center;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tab-header .row .die-num {
+  color: #ffffff;
+}
+
+.tab-header .row {
+  padding: 10px;
+  background-color: #240046;
+  border-radius: 6px 6px 0 0;
+}
+
+.tab-header .row div {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.tab-body .row {
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+.tab-body .row div {
+  display: flex;
+  justify-content: center;
+}
+
+.tab-content {
+  font-family: Inter;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #240046;
+  margin: auto 7px;
+}
+
+.trophy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
